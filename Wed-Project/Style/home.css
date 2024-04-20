@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color:black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+
+}

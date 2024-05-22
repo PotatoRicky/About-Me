@@ -1,0 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #6a96d4;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.image {
+    background-color: #A2D6F9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    max-width: 720px;
+}
+
+.intro {
+    background-color: #A2D6F9;
+    padding: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    width: 100%;
+    max-width: 800px;
+    height: fit-content;
+    color: black;
+    line-height: 24px;
+    border-radius: 16px;
+    margin-top: -100px;
+    text-align: center;
+}
+
+.about-me, .hobbies {
+    background-color: #A2D6F9;
+    padding: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    width: 100%;
+    max-width: 800px;
+    height: fit-content;
+    color: black;
+    line-height: 24px;
+    border-radius: 16px;
+    margin-top: -260px;
+    text-align: center;
+}
+
+.hobbies2 {
+    background-color: #A2D6F9;
+    padding: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    width: 100%;
+    max-width: 800px;
+    height: fit-content;
+    color: black;
+    line-height: 24px;
+    border-radius: 16px;
+    margin-top: -420px;
+    text-align: center;
+}
+
+img {
+    border-radius: 50%;
+    background-color: #A2D6F9;
+}
+
+.intro-title {
+    width: 300px;
+    height: 80px;
+    display: inline-block;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    left: 0;
+    text-align: centre;
+    top: 80px;
+    left: 50%;
+    margin: 10px 0 0 -150px;
+    line-height: 80px;
+    font-size: 64px;
+}
+
+.info{
+    font-size: 22px;
+    line-height: 40px;
+    background-color: #A2D6F9;
+}
+
+footer {
+    background-color:#4c77d3;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.title {
+    font-size: 40px;
+    line-height: 40px;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #A2D6F9;
+}
+
+.subtitle {
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #A2D6F9;
+}
+
+header {
+    background-color: #4c77d3;
+    padding: 10px 0;
+    font-size: 30px;
+}
+
+nav ul {
+    background-color: #4c77d3;
+    width: 100%;
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    background-color: #4c77d3;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ccc;
+}
+
+.memory {
+    position: absolute;
+    display: flex;
+}
+
+.memory {
+    border-radius: 50%;
+    height: 160px;
+    width: 160px;
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+}
+
+.memory .thumbsup {
+    border-radius: 50%;
+    height: 160px;
+    width: 160px;
+    position: absolute;
+    top: -120%;
+    left: 240%;
+}
+
+.memory .baby {
+    border-radius: 50%;
+    height: 160px;
+    width: 160px;
+    position: absolute;
+    top: -360%;
+    left: -220%;
+}
+
+.memory .yumcha {
+    border-radius: 50%;
+    height: 160px;
+    width: 160px;
+    position: relative;
+    top: -190%;
+    left: 220%;
+}
+
+.memory .panda {
+    border-radius: 50%;
+    height: 160px;
+    width: 160px;
+    position: relative;
+    top: -400%;
+    left: -260%;
+}
+
+.memory .song {
+    border-radius: 50%;
+    height: 160px;
+    width: 160px;
+    position: relative;
+    top: -340px;
+    left: 240%;
+}
+
+.memory .cello {
+    border-radius: 50%;
+    height: 160px;
+    width: 160px;
+    position: relative;
+    top: -320%;
+    left: -240%;
+}
+
+.memory .gym {
+    border-radius: 50%;
+    height: 160px;
+    width: 160px;
+    position: relative;
+    top: -360%;
+    left: 260%;
+}
+
+.memory .chess {
+    border-radius: 50%;
+    height: 160px;
+    width: 160px;
+    position: relative;
+    top: -330%;
+    left: -220%;
+}
+
+.memory .bunny {
+    border-radius: 50%;
+    height: 160px;
+    width: 160px;
+    position: relative;
+    top: -300%;
+    left: 260%;
+}
+
+.memory .linkclick {
+    border-radius: 50%;
+    height: 160px;
+    width: 160px;
+    position: relative;
+    top: -270%;
+    left: -240%;
+}
+
+.memory .shark {
+    border-radius: 50%;
+    height: 160px;
+    width: 160px;
+    position: relative;
+    top: -320%;
+    left: 220%;
+}
+
+.bubble {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    transform: translateX(-160px);
+    animation: change_colour 1s infinite alternate;
+}
+
+.bubble:hover {
+    opacity: 0%;
+    transition: 2s;
+}
+
+@keyframes change_colour {
+    0% {
+        background-color: #2e7bda;
+    }
+    50% {
+        background-color: #4a7ae2;
+    }
+    100% {
+        background-color: #4c77d3;
+    }
+}
+
+
+
+audio {
+    background-color: #A2D6F9;
+
+}
+
+.contactstitle {
+    margin: 60px;
+    font-size: 40px;
+    background-color: #6a96d4;
+}
+
+.contacts {
+    height: 400px;
+    margin-top: -480px;
+}
+.contacts a {
+    text-decoration: none;
+}
+
+.contacts img {
+    margin-bottom: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: #6a96d4;
+}
+
+.discord:hover {
+    opacity: 0%;
+    transition: 2s;
+}
+
+.discordname {
+    font-size: 30px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+}
+@media only screen and (max-width: 900px) {
+    .memory .thumbsup,
+    .memory .yumcha,
+    .memory .gym,
+    .memory .bunny,
+    .memory .shark {
+        left: 180%;
+    }
+    .memory .baby,
+    .memory .panda,
+    .memory .cello,
+    .memory .chess,
+    .memory .linkclick {
+        left: -180%;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    .content .intro, 
+    .content .about-me, 
+    .content .hobbies, 
+    .content .hobbies2 {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 10px;
+    }
+    .content .intro {
+        margin-top: -160px;
+    }
+    .content .contacts {
+        margin-top: 0px;
+    }
+
+    .memory .thumbsup,
+    .memory .yumcha,
+    .memory .gym,
+    .memory .bunny,
+    .memory .shark,
+    .memory .baby,
+    .memory .panda,
+    .memory .cello,
+    .memory .chess,
+    .memory .linkclick {
+        left: 0;
+        top: 0;
+    }
+}

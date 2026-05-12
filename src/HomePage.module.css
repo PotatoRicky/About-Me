@@ -1,0 +1,36 @@
+/* Glow effect for PNG images */
+
+.body {
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    line-height: 1.6;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #0a0822;
+}
+
+.vgCircle {
+    width: 300px;
+    height: auto;
+    filter: drop-shadow(0 0 24px #00f0ff) drop-shadow(0 0 48px #00f0ff);
+}
+
+.cardFanContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 0;
+    margin-top: 40px;
+    position: relative;
+    height: 240px;
+    background: none;
+}
+
+.fanCardWrapper {
+    transition: transform 0.2s;
+    margin: 0 -24px;
+    background: none;
+}

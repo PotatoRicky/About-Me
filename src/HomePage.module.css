@@ -1,5 +1,3 @@
-/* Glow effect for PNG images */
-
 .body {
     font-family: 'Arial', sans-serif;
     color: #ffffff;
@@ -7,13 +5,30 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     min-height: 100vh;
+    width: 100vw;
     background: #0a0822;
+    overflow: hidden;
+    user-select: none;
+}
+
+.circleContainer {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+    width: 300px;
+}
+
+.circleHovered {
+    transform: scale(1.1);
+    filter: brightness(1.2);
 }
 
 .vgCircle {
     width: 300px;
     height: auto;
+    display: block;
     filter: drop-shadow(0 0 24px #00f0ff) drop-shadow(0 0 48px #00f0ff);
 }
 
@@ -33,4 +48,17 @@
     transition: transform 0.2s;
     margin: 0 -24px;
     background: none;
+    cursor: grab;
+    position: relative;
+}
+
+.fanCardWrapper:active {
+    cursor: grabbing;
+}
+
+.dragging {
+    position: fixed;
+    transition: none;
+    cursor: grabbing;
+    pointer-events: none;
 }

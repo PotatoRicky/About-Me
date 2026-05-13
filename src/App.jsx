@@ -2,21 +2,34 @@ import { Routes, Route } from 'react-router-dom';
 import styles from './App.module.css'
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
-import DarkVeil from './components/DarkVeil';
+import Galaxy from './components/Galaxy';
 
 function App() {
   return (
     <div>
         <div>
-			<div style={{ width: '100%', height: '100%', position: 'fixed', inset: 0, zIndex: 0 }}>
-				<DarkVeil
-					hueShift={0}
-					noiseIntensity={0}
-					scanlineIntensity={0}
-					speed={2}
-					scanlineFrequency={0}
-					warpAmount={0}
-				/>
+			<div style={{
+				width: '100%',
+				height: '100%',
+				position: 'fixed',
+				inset: 0,
+				zIndex: 0,
+				background: 'black', 
+			}}>
+			<Galaxy 
+				mouseRepulsion
+				mouseInteraction={false}
+				density={1}
+				glowIntensity={0.2}
+				saturation={0}
+				hueShift={140}
+				twinkleIntensity={0.1}
+				rotationSpeed={0.1}
+				repulsionStrength={2}
+				autoCenterRepulsion={0}
+				starSpeed={0.5}
+				speed={1}
+			/>
 			</div>
 			<Routes>
 			<Route path="/" element={<HomePage />} />

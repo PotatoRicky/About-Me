@@ -1,5 +1,24 @@
 .introPic {
     height: auto;
-    width: 40%;
+    width: 30%;
     border-radius: 32px;
+}
+
+.block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    padding: 2%;
+}
+
+.intro {
+    width: auto;
+    margin: 5%;
+    font-size: large;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

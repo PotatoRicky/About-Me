@@ -2,23 +2,31 @@
     height: auto;
     width: 30%;
     border-radius: 32px;
+    position: relative;
+    border: 3px solid silver;
+    outline: 6px solid #161e4d;
+    border-radius: 16px;
+    rotate: -5deg;
 }
 
 .block {
     display: flex;
+    margin: 20px;
     flex-direction: row;
     align-items: center;
     justify-content: left;
-    padding: 2%;
+    margin: 4rem;
 }
 
 .intro {
     width: auto;
-    margin: 5%;
+    margin-left: 5%;
+    position: relative;
     font-size: large;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    white-space: pre-line;
 }

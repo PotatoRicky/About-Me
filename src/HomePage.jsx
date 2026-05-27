@@ -6,10 +6,10 @@ import { useNavigate } from 'react-router-dom';
 
 const cardsData = [
     { title: 'About Me', image: 'https://via.placeholder.com/150', path: '/about' },
-    { title: 'Hobbies', image: 'https://via.placeholder.com/150', path: '/hobbies' },
-    { title: 'Projects', image: 'https://via.placeholder.com/150', path: '/projects' },
-    { title: 'Work', image: 'https://via.placeholder.com/150', path: '/work' },
-    { title: 'Contact', image: 'https://via.placeholder.com/150', path: '/contact' },
+    // { title: 'Hobbies', image: 'https://via.placeholder.com/150', path: '/hobbies' },
+    // { title: 'Projects', image: 'https://via.placeholder.com/150', path: '/projects' },
+    // { title: 'Work', image: 'https://via.placeholder.com/150', path: '/work' },
+    // { title: 'Contact', image: 'https://via.placeholder.com/150', path: '/contact' },
 ];
 
 export default function HomePage() {
@@ -21,8 +21,8 @@ export default function HomePage() {
     const [isOverCircle, setIsOverCircle] = useState(false);
     const dragOffsetRef = useRef({ x: 0, y: 0 });
 
-    const fanAngles = [-20, -10, 0, 10, 20];
-    const fanY = [35, 10, 0, 10, 35];
+    const fanAngles = [0, 10, -10, 20, -20];
+    const fanY = [0, 10, 10, 35, 35];
 
     const handleMouseDown = (e, index) => {
         setDraggedIndex(index);

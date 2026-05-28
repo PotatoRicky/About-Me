@@ -4,25 +4,23 @@ import Card from './components/Card.jsx';
 import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const cardsData = [
-    { title: 'About Me', image: 'https://via.placeholder.com/150', path: '/about' },
-    // { title: 'Hobbies', image: 'https://via.placeholder.com/150', path: '/hobbies' },
-    // { title: 'Projects', image: 'https://via.placeholder.com/150', path: '/projects' },
-    // { title: 'Work', image: 'https://via.placeholder.com/150', path: '/work' },
-    // { title: 'Contact', image: 'https://via.placeholder.com/150', path: '/contact' },
-];
-
 export default function HomePage() {
     const navigate = useNavigate();
     const circleRef = useRef(null);
+
+    const hobbyUnlocked = localStorage.getItem('unlockedHobbies') === 'true';
+
+    const cardsData = [
+        { title: 'About Me', image: 'https://via.placeholder.com/150', path: '/about' },
+        { title: 'Projects', image: 'https://via.placeholder.com/150', path: '/projects' },
+        { title: 'Contact', image: 'https://via.placeholder.com/150', path: '/contact' },
+        ...(hobbyUnlocked ? [{ title: 'Hobbies', image: 'https://via.placeholder.com/150', path: '/hobbies' }] : [])
+    ];
 
     const [draggedIndex, setDraggedIndex] = useState(null);
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [isOverCircle, setIsOverCircle] = useState(false);
     const dragOffsetRef = useRef({ x: 0, y: 0 });
-
-    const fanAngles = [0, 10, -10, 20, -20];
-    const fanY = [0, 10, 10, 35, 35];
 
     const handleMouseDown = (e, index) => {
         setDraggedIndex(index);
@@ -86,11 +84,25 @@ export default function HomePage() {
                 ref={circleRef}
                 className={`${styles.circleContainer} ${isOverCircle ? styles.circleHovered : ''}`}  
             >
-                <img src={vgCircle} className={styles.vgCircle} alt="VG Circle" />
+                <img src={vgCircle} className={styles.vgCircle}/>
             </div>
             <div className={styles.cardFanContainer}>
                 {cardsData.map((card, i) => {
                     const isDragging = (draggedIndex === i);
+                    const numCards = cardsData.length;
+                    let angle, y;
+                    if (numCards % 2 === 0) {
+                        if (i < numCards / 2) {
+                            angle = - (10 * ((numCards / 2) - i));
+                            y = 10 * Math.abs((numCards / 2) - i);
+                        } else {
+                            angle = 10 * ((i - numCards / 2) + 1);
+                            y = 10 * (Math.abs((numCards / 2) - i) + 1);
+                        }
+                    } else {
+                        angle = - (10 * ((numCards - 1) / 2 - i));
+                        y = 10 * Math.abs(((numCards - 1) / 2) - i);
+                    }
                     return (
                         <div
                             key={card.title}
@@ -98,7 +110,7 @@ export default function HomePage() {
                             style={{
                                 transform: isDragging 
                                     ? 'none' 
-                                    : `rotate(${fanAngles[i]}deg) translateY(${fanY[i]}px)`,
+                                    : `rotate(${angle}deg) translateY(${y}px)`,
                                 zIndex: isDragging ? 9999 : 10 - Math.abs(i - 2),
                                 left: isDragging ? `${position.x}px` : 'auto',
                                 top: isDragging ? `${position.y}px` : 'auto',

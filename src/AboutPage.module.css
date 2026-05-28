@@ -1,32 +1,211 @@
-.introPic {
+.block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.5rem 2rem;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.intro {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: white;
+    margin: 0;
+    white-space: pre-line;
+    font-weight: normal;
+}
+
+.imgLeft {
     height: auto;
     width: 30%;
-    border-radius: 32px;
-    position: relative;
+    flex-shrink: 0;
     border: 3px solid silver;
     outline: 6px solid #161e4d;
     border-radius: 16px;
     rotate: -5deg;
+    margin: 1rem 1.5rem;
 }
 
-.block {
+.imgLeft:hover {
+    transform: translateY(-10px);
+    z-index: 10;
+}
+
+.imgRight {
+    height: auto;
+    width: 30%;
+    flex-shrink: 0;
+    border: 3px solid silver;
+    outline: 6px solid #161e4d;
+    border-radius: 16px;
+    rotate: 5deg;
+    margin: 1rem 1.5rem;
+}
+
+.imgRight:hover {
+    transform: translateY(-10px);
+    z-index: 10;
+}
+
+.imageRow {
     display: flex;
-    margin: 20px;
     flex-direction: row;
     align-items: center;
-    justify-content: left;
-    margin: 4rem;
+    justify-content: center;
+    padding: 0.5rem 2rem;
 }
 
-.intro {
-    width: auto;
-    margin-left: 5%;
+.rowImgH {
+    width: 40%;
+    height: auto;
+    border-radius: 16px;
+    border: 3px solid silver;
+    outline: 6px solid #161e4d;
+    transition: transform 0.2s, z-index 0.2s;
+}
+
+.rowImgV {
+    width: 30%;
+    height: auto;
+    border-radius: 16px;
+    border: 3px solid silver;
+    outline: 6px solid #161e4d;
+    transition: transform 0.2s, z-index 0.2s;
+    rotate: -2deg;
+}
+
+.rowImgH:nth-child(1) { rotate: -5deg; margin-bottom: -3rem;}
+.rowImgH:nth-child(2) { rotate: 5deg; margin-left: -1.5rem;}
+
+.rowImgH:hover, .rowImgV:hover {
+    transform: translateY(-10px);
+    z-index: 10;
+}
+
+.guess {
     position: relative;
-    font-size: large;
-    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-top: 2rem;
+}
+
+.guessContainer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.guessText {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: white;
+    margin: 0;
     white-space: pre-line;
+    font-weight: normal;
+    text-align: center;
+}
+
+.guessButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.guessInput {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    width: 200px;
+    text-align: center;
+}
+
+.guessBtn {
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    background-color: gold;
+    color: black;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    z-index: 1;
+}
+
+.no, .cat {
+    width: 150px;
+    height: auto;
+    opacity: 0;
+    transition: opacity 1s ease;
+    border-radius: 8px;
+    translate: 0 -70px;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.visible {
+    opacity: 1;
+    z-index: 10;
+}
+
+.return {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: -2rem;
+    transform: translateY(-70px);
+}
+
+.returnBtn {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background-color: black;
+    outline: 2px solid gold;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.popup {
+    background: #161e4d;
+    border: 3px solid gold;
+    border-radius: 16px;
+    padding: 2rem 3rem;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    animation: popIn 0.3s ease;
+}
+
+@keyframes popIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }

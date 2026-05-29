@@ -1,7 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
 import styles from './App.module.css'
+
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
+import ProjectsPage from './ProjectsPage';
+
 import Galaxy from './components/Galaxy';
 
 function App() {
@@ -34,6 +37,7 @@ function App() {
 			<Routes>
 			<Route path="/" element={<HomePage />} />
 			<Route path="/about" element={<AboutPage />} />
+			<Route path="/projects" element={<ProjectsPage />} />
 			</Routes>
         </div>
     </div>

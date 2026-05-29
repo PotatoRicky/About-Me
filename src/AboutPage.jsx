@@ -71,7 +71,7 @@ export default function AboutPage() {
     }
 
     return (
-        <div className={pageStyles.aboutPage}>
+        <div className={pageStyles.pageWrapper}>
             {showPopup && (
                 <div className={styles.overlay} onClick={() => setShowPopup(false)}>
                     <div className={styles.popup} onClick={(e) => e.stopPropagation()}>

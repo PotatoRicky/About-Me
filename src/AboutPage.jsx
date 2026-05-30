@@ -8,7 +8,7 @@ import vgCircle from './assets/vg-circle.png';
 import introPic from './assets/intro-pic.jpg';
 import melbourne from './assets/Melbourne.jpg';
 import cardBg from './assets/card-bg.png';
-import mog from './assets/mog.jpg';
+import mog from './assets/mog.JPG';
 import fireworks from './assets/fireworks.jpg';
 import china from './assets/china.jpg';
 import no from './assets/no.jpg';

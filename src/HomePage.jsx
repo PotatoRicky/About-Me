@@ -4,6 +4,8 @@ import Card from './components/Card.jsx';
 import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+localStorage.setItem('unlockedHobbies', 'false');
+
 export default function HomePage() {
     const navigate = useNavigate();
     const circleRef = useRef(null);
@@ -13,7 +15,7 @@ export default function HomePage() {
     const cardsData = [
         { title: 'About Me', image: 'https://via.placeholder.com/150', path: '/about' },
         { title: 'Projects', image: 'https://via.placeholder.com/150', path: '/projects' },
-        { title: 'Contact', image: 'https://via.placeholder.com/150', path: '/contact' },
+        { title: 'Contacts', image: 'https://via.placeholder.com/150', path: '/contacts' },
         ...(hobbyUnlocked ? [{ title: 'Hobbies', image: 'https://via.placeholder.com/150', path: '/hobbies' }] : [])
     ];
 

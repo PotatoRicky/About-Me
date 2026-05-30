@@ -4,6 +4,8 @@ import styles from './App.module.css'
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
 import ProjectsPage from './ProjectsPage';
+import ContactsPage from './ContactsPage';
+import HobbiesPage from './HobbiesPage';
 
 import Galaxy from './components/Galaxy';
 
@@ -38,6 +40,8 @@ function App() {
 			<Route path="/" element={<HomePage />} />
 			<Route path="/about" element={<AboutPage />} />
 			<Route path="/projects" element={<ProjectsPage />} />
+			<Route path="/contacts" element={<ContactsPage />} />
+			<Route path="/hobbies" element={<HobbiesPage />} />
 			</Routes>
         </div>
     </div>

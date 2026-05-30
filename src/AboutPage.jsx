@@ -1,10 +1,11 @@
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
-import vgCircle from './assets/vg-circle.png';
 import pageStyles from './Pages.module.css';
-import introPic from './assets/intro-pic.jpg';
 import styles from './AboutPage.module.css';
+
+import vgCircle from './assets/vg-circle.png';
+import introPic from './assets/intro-pic.jpg';
 import melbourne from './assets/Melbourne.jpg';
 import cardBg from './assets/card-bg.png';
 import mog from './assets/mog.jpg';
@@ -18,8 +19,8 @@ import cat from './assets/cat.png';
 export default function AboutPage() {
     const navigate = useNavigate();
     const [userGuess, setUserGuess] = useState(false);
-    const [wrongGuess, setWrongGuess] = useState(false);
     const [showPopup, setShowPopup] = useState(false);
+    const [wrongGuess, setWrongGuess] = useState(false);
     const [alreadyGuessed, setAlreadyGuessed] = useState(false);
 
     const aboutText = <>Hello, my name is Ricky and I am a third year student studying Mechanical Engineering and Computer Science at UNSW <br/><br/> I want this page to be like a fun puzzle, where you can find out more information about me as you explore each card. <i>hint hint; click around</i></>
@@ -42,26 +43,27 @@ export default function AboutPage() {
         } else {
             setWrongGuess(true);
         }
-        setUserGuess(false);
     }
 
     const handleEmailInput = (e) => {
         const value = e.target.value.toLowerCase();
         if (value.includes('tcg') || value.includes('vanguard') || value.includes('card') || value.includes('vg')) {
             setUserGuess(true);
+        } else {
+            setUserGuess(false);
         }
     }
 
     useEffect(() => {
         if (wrongGuess) {
-            const timer = setTimeout(() => setWrongGuess(false), 2000);
+            const timer = setTimeout(() => setWrongGuess(false), 1000);
             return () => clearTimeout(timer);
         }
     }, [wrongGuess]);
 
     useEffect(() => {
         if (alreadyGuessed) {
-            const timer = setTimeout(() => setAlreadyGuessed(false), 2000);
+            const timer = setTimeout(() => setAlreadyGuessed(false), 1000);
             return () => clearTimeout(timer);
         }
     }, [alreadyGuessed]);

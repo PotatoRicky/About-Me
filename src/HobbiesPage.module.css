@@ -1,0 +1,161 @@
+.block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.5rem 2rem;
+    height: 200px;
+}
+
+.intro {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: white;
+    margin: 0;
+    white-space: pre-line;
+    font-weight: normal;
+    text-align: center;
+}
+
+.hidden {
+    color: #161e4d;
+}
+
+.textCol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.imgLeft {
+    height: auto;
+    width: 40%;
+    flex-shrink: 0;
+    border: 3px solid silver;
+    outline: 6px solid #161e4d;
+    border-radius: 16px;
+    rotate: -5deg;
+    margin: 1rem 1.5rem;
+}
+
+.imgLeft:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+.imgRight {
+    height: auto;
+    width: 40%;
+    flex-shrink: 0;
+    border: 3px solid silver;
+    outline: 6px solid #161e4d;
+    border-radius: 16px;
+    rotate: 5deg;
+    margin: 1rem 1.5rem;
+}
+
+.imgRight:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+.imageContainer {
+    position: relative;
+    width: 40%;
+    flex-shrink: 0;
+    rotate: 5deg;
+    margin: 1rem 1.5rem;
+}
+
+.hiddenImg {
+    width: 100%;
+    display: block;
+
+    border: 3px solid silver;
+    outline: 6px solid #161e4d;
+    border-radius: 16px;
+}
+
+.hiddenImg:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+.cover {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(12px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-weight: bold;
+    border-radius: 16px;
+}
+
+.audioContainer {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    flex-shrink: 0;
+    margin: 1rem 1.5rem;
+}
+
+.audioCover {
+    position: absolute;
+    inset: 0;
+
+    background: rgb(0, 0, 0);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-weight: bold;
+    border-radius: 16px;
+    z-index: 1;
+}
+
+.return {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.returnText {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: white;
+    margin: 0;
+    white-space: pre-line;
+    font-weight: normal;
+    text-align: center;
+}
+
+.returnBtn {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background-color: black;
+    outline: 2px solid gold;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 5%;
+}

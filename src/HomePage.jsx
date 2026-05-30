@@ -6,6 +6,8 @@ import { useNavigate } from 'react-router-dom';
 
 localStorage.setItem('unlockedHobbies', 'false');
 
+import aboutMe from './assets/about-me.png'
+
 export default function HomePage() {
     const navigate = useNavigate();
     const circleRef = useRef(null);
@@ -13,7 +15,7 @@ export default function HomePage() {
     const hobbyUnlocked = localStorage.getItem('unlockedHobbies') === 'true';
 
     const cardsData = [
-        { title: 'About Me', image: 'https://via.placeholder.com/150', path: '/about' },
+        { title: 'About Me', image: aboutMe, path: '/about' },
         { title: 'Projects', image: 'https://via.placeholder.com/150', path: '/projects' },
         { title: 'Contacts', image: 'https://via.placeholder.com/150', path: '/contacts' },
         ...(hobbyUnlocked ? [{ title: 'Hobbies', image: 'https://via.placeholder.com/150', path: '/hobbies' }] : [])
@@ -119,7 +121,7 @@ export default function HomePage() {
                             }}
                             onMouseDown={(e) => handleMouseDown(e, i)}
                         >
-                            <Card title={card.title} image={card.image} />
+                            <Card title={card.title}/>
                         </div>
                     );
                 })}

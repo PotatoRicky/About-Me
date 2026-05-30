@@ -3,7 +3,7 @@ import BorderGlow from './BorderGlow';
 import CardBg from '../assets/card-bg.png';
 import vgCircle from '../assets/vg-circle.png';
 
-export default function Card({ title, image}) {
+export default function Card({ title}) {
     return (
         <div className={styles.cardWrapper}>
             <BorderGlow
@@ -20,7 +20,6 @@ export default function Card({ title, image}) {
                 <img src={CardBg} className={styles.cardBackground} />
                 <img src={vgCircle} className={styles.vgCircle} />
                 <div className={styles.card}>
-                    <img src={image} className={styles.cardImage} />
                     <h2 className={styles.cardTitle}>{title}</h2>
                 </div>
             </BorderGlow>
